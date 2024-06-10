@@ -11,4 +11,7 @@ class Helper: ObservableObject {
     @Published var compressionProgress: Float = 0.0
     @Published var selectedMovive: Movie? = nil
     @Published var previewURL: URL? = nil
+    @Published var calculatedBitrate: Int? = nil
+    @Published var videoSize: CGSize? = nil
+    @Published var videoLength: Double? = nil
 }
