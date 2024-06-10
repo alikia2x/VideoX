@@ -22,4 +22,6 @@ VideoX is an open source video compress app for iOS with clean UI.
 - A simple and elegant UI powered by pure SwiftUI
 - Lightweight: Less than 1MB in size, hardware accelerated encoding powered by [AVFoundation](https://developer.apple.com/documentation/avfoundation)
 
+> GPL 3.0, pure SwiftUI, ~100kB bundle size with no dependencies, you deserve better.
+
 Made with ❤️ by [alikia2x](https://alikia2x.com).
