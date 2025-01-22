@@ -13,6 +13,7 @@
 		C42D9B882C163A8A008E3AAC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9B872C163A8A008E3AAC /* MainView.swift */; };
 		C42D9B8B2C163F1B008E3AAC /* BackendMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9B8A2C163F1B008E3AAC /* BackendMain.swift */; };
 		C42D9B8D2C163F86008E3AAC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9B8C2C163F86008E3AAC /* Observable.swift */; };
+		C4920EDC2CAAF8F3007497B8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C4920EDB2CAAF8F3007497B8 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C42D9B872C163A8A008E3AAC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C42D9B8A2C163F1B008E3AAC /* BackendMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendMain.swift; sourceTree = "<group>"; };
 		C42D9B8C2C163F86008E3AAC /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		C4920EDB2CAAF8F3007497B8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,7 @@
 		C42D9B4F2C161D75008E3AAC = {
 			isa = PBXGroup;
 			children = (
+				C4920EDB2CAAF8F3007497B8 /* Localizable.xcstrings */,
 				C42D9B5A2C161D75008E3AAC /* VideoX */,
 				C42D9B592C161D75008E3AAC /* Products */,
 			);
@@ -123,6 +126,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = C42D9B4F2C161D75008E3AAC;
 			productRefGroup = C42D9B592C161D75008E3AAC /* Products */;
@@ -141,6 +145,7 @@
 			files = (
 				C42D9B632C161D76008E3AAC /* Preview Assets.xcassets in Resources */,
 				C42D9B602C161D76008E3AAC /* Assets.xcassets in Resources */,
+				C4920EDC2CAAF8F3007497B8 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +225,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -276,6 +282,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -288,7 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"VideoX/Preview Content\"";
-				DEVELOPMENT_TEAM = 644FU9Z647;
+				DEVELOPMENT_TEAM = 5357GH898G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "FUCK YOU! GIVE ME THE PERMISSION, NOW!";
@@ -304,7 +311,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alikia2x.VideoX;
+				PRODUCT_BUNDLE_IDENTIFIER = fan.lty.videox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -325,7 +332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"VideoX/Preview Content\"";
-				DEVELOPMENT_TEAM = 644FU9Z647;
+				DEVELOPMENT_TEAM = 5357GH898G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "FUCK YOU! GIVE ME THE PERMISSION, NOW!";
@@ -341,7 +348,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alikia2x.VideoX;
+				PRODUCT_BUNDLE_IDENTIFIER = fan.lty.videox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
