@@ -11,9 +11,15 @@
 		C42D9B602C161D76008E3AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42D9B5F2C161D76008E3AAC /* Assets.xcassets */; };
 		C42D9B632C161D76008E3AAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42D9B622C161D76008E3AAC /* Preview Assets.xcassets */; };
 		C42D9B882C163A8A008E3AAC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9B872C163A8A008E3AAC /* MainView.swift */; };
-		C42D9B8B2C163F1B008E3AAC /* BackendMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9B8A2C163F1B008E3AAC /* BackendMain.swift */; };
-		C42D9B8D2C163F86008E3AAC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9B8C2C163F86008E3AAC /* Observable.swift */; };
 		C4920EDC2CAAF8F3007497B8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C4920EDB2CAAF8F3007497B8 /* Localizable.xcstrings */; };
+		C4A5B5582D413F2200FE4867 /* ResultPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5B5552D413F2200FE4867 /* ResultPreviewView.swift */; };
+		C4A5B5592D413F2200FE4867 /* VideoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5B5562D413F2200FE4867 /* VideoPickerView.swift */; };
+		C4A5B55A2D413F2200FE4867 /* VideoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5B5572D413F2200FE4867 /* VideoPreviewView.swift */; };
+		C4A5B55B2D413F2200FE4867 /* CompressionControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5B5532D413F2200FE4867 /* CompressionControlsView.swift */; };
+		C4A5B55C2D413F2200FE4867 /* CompressionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5B5542D413F2200FE4867 /* CompressionSettingsView.swift */; };
+		C4A5B55F2D41498100FE4867 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5B55E2D41498100FE4867 /* Utils.swift */; };
+		C4A5B5602D41498100FE4867 /* Structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5B55D2D41498100FE4867 /* Structure.swift */; };
+		C4A5B5632D414A2000FE4867 /* CompressVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5B5622D414A2000FE4867 /* CompressVideo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +28,15 @@
 		C42D9B5F2C161D76008E3AAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C42D9B622C161D76008E3AAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C42D9B872C163A8A008E3AAC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		C42D9B8A2C163F1B008E3AAC /* BackendMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendMain.swift; sourceTree = "<group>"; };
-		C42D9B8C2C163F86008E3AAC /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		C4920EDB2CAAF8F3007497B8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		C4A5B5532D413F2200FE4867 /* CompressionControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionControlsView.swift; sourceTree = "<group>"; };
+		C4A5B5542D413F2200FE4867 /* CompressionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionSettingsView.swift; sourceTree = "<group>"; };
+		C4A5B5552D413F2200FE4867 /* ResultPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPreviewView.swift; sourceTree = "<group>"; };
+		C4A5B5562D413F2200FE4867 /* VideoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPickerView.swift; sourceTree = "<group>"; };
+		C4A5B5572D413F2200FE4867 /* VideoPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewView.swift; sourceTree = "<group>"; };
+		C4A5B55D2D41498100FE4867 /* Structure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structure.swift; sourceTree = "<group>"; };
+		C4A5B55E2D41498100FE4867 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C4A5B5622D414A2000FE4867 /* CompressVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressVideo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +90,14 @@
 			isa = PBXGroup;
 			children = (
 				C42D9B872C163A8A008E3AAC /* MainView.swift */,
-				C42D9B8A2C163F1B008E3AAC /* BackendMain.swift */,
-				C42D9B8C2C163F86008E3AAC /* Observable.swift */,
+				C4A5B5532D413F2200FE4867 /* CompressionControlsView.swift */,
+				C4A5B5542D413F2200FE4867 /* CompressionSettingsView.swift */,
+				C4A5B5552D413F2200FE4867 /* ResultPreviewView.swift */,
+				C4A5B5562D413F2200FE4867 /* VideoPickerView.swift */,
+				C4A5B5572D413F2200FE4867 /* VideoPreviewView.swift */,
+				C4A5B55D2D41498100FE4867 /* Structure.swift */,
+				C4A5B55E2D41498100FE4867 /* Utils.swift */,
+				C4A5B5622D414A2000FE4867 /* CompressVideo.swift */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -156,10 +174,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C42D9B8D2C163F86008E3AAC /* Observable.swift in Sources */,
+				C4A5B55F2D41498100FE4867 /* Utils.swift in Sources */,
+				C4A5B5602D41498100FE4867 /* Structure.swift in Sources */,
 				C42D9B882C163A8A008E3AAC /* MainView.swift in Sources */,
-				C42D9B8B2C163F1B008E3AAC /* BackendMain.swift in Sources */,
 				C42D9B5C2C161D75008E3AAC /* VideoXApp.swift in Sources */,
+				C4A5B5582D413F2200FE4867 /* ResultPreviewView.swift in Sources */,
+				C4A5B5592D413F2200FE4867 /* VideoPickerView.swift in Sources */,
+				C4A5B55A2D413F2200FE4867 /* VideoPreviewView.swift in Sources */,
+				C4A5B5632D414A2000FE4867 /* CompressVideo.swift in Sources */,
+				C4A5B55B2D413F2200FE4867 /* CompressionControlsView.swift in Sources */,
+				C4A5B55C2D413F2200FE4867 /* CompressionSettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,24 +317,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"VideoX/Preview Content\"";
 				DEVELOPMENT_TEAM = 5357GH898G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "FUCK YOU! GIVE ME THE PERMISSION, NOW!";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "VideoX needs permission to save the compressed video to your photo library.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = fan.lty.videox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -330,24 +354,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"VideoX/Preview Content\"";
 				DEVELOPMENT_TEAM = 5357GH898G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "FUCK YOU! GIVE ME THE PERMISSION, NOW!";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "VideoX needs permission to save the compressed video to your photo library.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = fan.lty.videox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

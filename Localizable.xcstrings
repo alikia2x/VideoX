@@ -1,24 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "2K" : {
-      "shouldTranslate" : false
-    },
-    "4K" : {
-      "shouldTranslate" : false
-    },
-    "360P" : {
-      "shouldTranslate" : false
-    },
-    "480P" : {
-      "shouldTranslate" : false
-    },
-    "720P" : {
-      "shouldTranslate" : false
-    },
-    "1080P" : {
-      "shouldTranslate" : false
-    },
     "Codec" : {
       "localizations" : {
         "zh-Hans" : {
@@ -35,6 +17,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "压缩并保存"
+          }
+        }
+      }
+    },
+    "Compress Progress: " : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "压缩进度："
           }
         }
       }
@@ -136,6 +128,7 @@
       }
     },
     "Original" : {
+      "extractionState" : "manual",
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
