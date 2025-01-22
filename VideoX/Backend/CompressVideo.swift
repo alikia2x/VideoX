@@ -12,7 +12,6 @@ import Photos
 import PhotosUI
 import SwiftUI
 
-
 func compressVideo(
     inputURL: URL, helper: Helper, quality: Int, codec: Int
 ) async {
@@ -83,8 +82,15 @@ func compressVideo(
     let naturalSize = try? await videoTrack!.load(.naturalSize)
     let transform = try? await videoTrack!.load(.preferredTransform)
     let metadata = try? await videoTrack!.load(.metadata)
+    let commonMetadata = try? await asset.load(.commonMetadata)
+    let availableMetadataFormats = try? await asset.load(
+        .availableMetadataFormats)
 
-    if naturalSize == nil || transform == nil || metadata == nil { return }
+    if naturalSize == nil || transform == nil || metadata == nil
+        || commonMetadata == nil || availableMetadataFormats == nil
+    {
+        return
+    }
 
     let height = adjustVideoSettings(
         videoSettings: &videoSettings, naturalSize: naturalSize!,
@@ -109,7 +115,19 @@ func compressVideo(
     audioWriterInput.expectsMediaDataInRealTime = false
     writer.add(audioWriterInput)
 
+    // Copy all metadata from source to output
     writer.metadata = metadata!
+
+    // Add common metadata
+    for format in availableMetadataFormats! {
+        let formatMetadata = try? await asset.loadMetadata(for: format)
+        if let formatMetadata = formatMetadata {
+            writer.metadata.append(contentsOf: formatMetadata)
+        }
+    }
+
+    // Add common metadata items
+    writer.metadata.append(contentsOf: commonMetadata!)
 
     await MainActor.run {
         helper.isCompressing = true
@@ -121,7 +139,7 @@ func compressVideo(
     writer.startSession(atSourceTime: .zero)
 
     let processingQueue = DispatchQueue(label: "videoProcessingQueue")
-    let updateInterval = 0.05 // Update progress every 50ms
+    let updateInterval = 0.05  // Update progress every 50ms
     var lastUpdateTime = CACurrentMediaTime()
 
     // Process video and audio
@@ -133,7 +151,7 @@ func compressVideo(
         while videoWriterInput.isReadyForMoreMediaData {
             if let buffer = videoReaderOutput.copyNextSampleBuffer() {
                 videoWriterInput.append(buffer)
-                
+
                 let currentTime = CACurrentMediaTime()
                 if currentTime - lastUpdateTime >= updateInterval {
                     lastUpdateTime = currentTime
@@ -141,7 +159,7 @@ func compressVideo(
                         CMTimeGetSeconds(
                             CMSampleBufferGetPresentationTimeStamp(buffer))
                             / CMTimeGetSeconds(asset.duration))
-                    
+
                     Task { @MainActor in
                         helper.compressionProgress = progress
                     }
