@@ -16,7 +16,7 @@ func compressVideo(
     inputURL: URL, helper: Helper, quality: Int, codec: Int
 ) async {
     let asset = AVAsset(url: inputURL)
-    let outputURL = URL.documentsDirectory.appending(path: "compressed.mp4")
+    let outputURL = URL.documentsDirectory.appending(path: "compressed.mov")
 
     if FileManager.default.fileExists(atPath: outputURL.path) {
         do {
@@ -60,7 +60,7 @@ func compressVideo(
     reader.add(audioReaderOutput)
 
     // Writer
-    guard let writer = try? AVAssetWriter(outputURL: outputURL, fileType: .mp4)
+    guard let writer = try? AVAssetWriter(outputURL: outputURL, fileType: .mov)
     else {
         print("Failed to create AVAssetWriter.")
         return
@@ -82,12 +82,11 @@ func compressVideo(
     let naturalSize = try? await videoTrack!.load(.naturalSize)
     let transform = try? await videoTrack!.load(.preferredTransform)
     let metadata = try? await videoTrack!.load(.metadata)
-    let commonMetadata = try? await asset.load(.commonMetadata)
     let availableMetadataFormats = try? await asset.load(
         .availableMetadataFormats)
 
     if naturalSize == nil || transform == nil || metadata == nil
-        || commonMetadata == nil || availableMetadataFormats == nil
+        || availableMetadataFormats == nil
     {
         return
     }
@@ -114,7 +113,7 @@ func compressVideo(
         mediaType: .audio, outputSettings: audioSettings)
     audioWriterInput.expectsMediaDataInRealTime = false
     writer.add(audioWriterInput)
-
+    
     // Copy all metadata from source to output
     writer.metadata = metadata!
 
@@ -125,10 +124,27 @@ func compressVideo(
             writer.metadata.append(contentsOf: formatMetadata)
         }
     }
+    
+    // remove creation date metadata
+    for metadataItem in writer.metadata {
+        if let key = metadataItem.key as? NSString {
+            let keyString = String(key)
+            if keyString == "com.apple.quicktime.creationdate" {
+                writer.metadata.removeAll(where: { $0 == metadataItem })
+            }
+        } else {
+            print("Failed to cast metadataItem.key to NSString")
+        }
+    }
+    
+    let creationDateMetadata: AVMutableMetadataItem = AVMutableMetadataItem()
+    creationDateMetadata.keySpace = AVMetadataKeySpace.common
+    creationDateMetadata.key = AVMetadataKey.commonKeyCreationDate as NSString
+    creationDateMetadata.value = Date().ISO8601Format() as NSString
+    creationDateMetadata.locale = Locale.current
+    writer.metadata.append(creationDateMetadata)
 
-    // Add common metadata items
-    writer.metadata.append(contentsOf: commonMetadata!)
-
+    // Start writing
     await MainActor.run {
         helper.isCompressing = true
         helper.compressionProgress = 0.0
